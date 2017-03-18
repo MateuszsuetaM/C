@@ -44,7 +44,7 @@ bool check(int dlugosc, char linia[]){
   char znak=linia[0];
   int sign, wielkosc;
   printf("\n----------------------------------------------------------------\n%s\n",linia);
-  printf("%c\n",znak);
+  // printf("%c\n",znak);
   if(znak=='-')
     sign=1,wielkosc=12;
   else if(isdigit(linia[0]))
@@ -63,7 +63,7 @@ bool check(int dlugosc, char linia[]){
             long int testInt=atol(test);
             int ostatnia = atoi(&linia[9+sign]);
             // printf(" ostatnia: %i, liczba: %s", ostatnia, linia);
-            printf("\nint: %li ostatnia: %i\n",testInt, ostatnia);
+            // printf("\nint: %li ostatnia: %i\n",testInt, ostatnia);
             if(testInt<=214748364&&ostatnia<=7){
               // printf("\nto jest LICZBA!!!  %s\n", linia);
               i=atol(linia);
