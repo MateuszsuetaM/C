@@ -19,9 +19,11 @@ int main(){
   y--;
 
   FILE *fp;
-  fp = fopen("liczby1.txt", "r");
-
-  while(!feof(fp)){
+  fp = fopen("liczby.txt", "r");
+int u=0;
+while(u<10){
+  u++;
+  // while(!feof(fp)){
     char linia[max];
     fgets(linia, max, fp);
     dlugosc = strlen(linia);
@@ -57,7 +59,7 @@ bool check(int dlugosc, char linia[]){
   // long long int linijka = atoi(linia);
   char znak=linia[0];
   int sign, wielkosc;
-  printf("\n________________________________________________________________\n%s\nNa 64 bitach:\n",linia);
+  printf("________________________________________________________________\n%sNa 64 bitach:\n",linia);
   if(znak=='-')
     sign=1,wielkosc=21;
   else if(isdigit(linia[0]))
@@ -137,7 +139,7 @@ bool check32(int dlugosc, char linia[]){
   // long long int linijka = atoi(linia);
   char znak=linia[0];
   int sign, wielkosc;
-  printf("\n***\nna 32 bitach:\n");
+  printf("na 32 bitach:\n");
   // printf("%c\n",znak);
   if(znak=='-')
     sign=1,wielkosc=12;

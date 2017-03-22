@@ -15,44 +15,46 @@ int main(){
   fp = fopen("liczby2.txt", "r");
   char linia[max];
   fgets(linia, max, fp);
-  czy=atof(linia);
-  printf("%f", czy);
+  czy=wczytana=strtof(linia, NULL);
   int dwa=2, poteg=0, tak;
-  char mantys[23];
-  // czy=atof(linia);
-  wczytana=atof(linia);
-  printf("\nmantysa zaraz po konwersji: %f\n", wczytana);
+  char mantysa[23];
+  // wczytana=strtof(linia, NULL);
   while(!(2>czy&&czy>=1)){
-    // float
     tak=potega(dwa, poteg);
     czy=wczytana/tak;
     poteg++;
-    printf("heh");
   }
-
-  printf("\nczy:%f",czy);
-  float mantysa=czy;
-  printf("\n%fmantysa",mantysa);
-  // printf("\n mantysa: %f", mantysa);
-mantysa=mantysa-1;
-
-printf("mantysa: %f", mantysa);
+  printf("f = %f\n",czy);
 
 int licznik=0;
 float zero = 0;
-while(!(mantysa==zero)){
-  if (mantysa>1){
-    mantys[licznik]=1;
-    mantysa--;
+while(!(czy==zero)){
+  if (czy>1.0f){
+    mantysa[licznik]=1;
+    czy=czy-1;
   }
   else{
-    mantys[licznik]=0;
+    mantysa[licznik]=0;
   }
-  mantysa=mantysa*2;
+  // float probna=czy;
+  printf("czy = %f",czy);
+czy=czy*2.0f;
+printf("czy + czy = %f",czy);
+  // czy=probna*2;
   licznik++;
-
 }
-printf("%s",mantys);
+printf("wyszedlem, hej :)\n");
+// licznik++;
+while(licznik<23){
+  mantysa[licznik]=0;
+  licznik++;
+}
+licznik=0;
+while(licznik<23){
+  printf("%d",mantysa[licznik]);
+  licznik++;
+}
+// printf("mantysa: %d\n",mantysa[0]);
 // int licznik2=0;
 // while(licznik2<23){
 //   printf("")
